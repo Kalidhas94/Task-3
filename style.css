@@ -1,0 +1,181 @@
+    body{
+      font-family: Cambria, Georgia, serif;
+      background-image: url("./images/memory_1.jpg");
+      background-size: cover;
+      text-align:center;
+      padding:30px;
+      margin: 0;
+    }
+
+    h1{
+      color: #fff;
+      margin-bottom:12px;
+      font-size: 25px;
+    }
+    h2{
+      color: #fff;
+      margin-bottom:12px;
+      font-size: 20px;
+    }
+
+    p{
+      color: #f7f4f4;
+      font-size: 14px;
+      margin-bottom:12px;
+    }
+
+    .stats{
+      font-size:14px;
+      margin:10px 0;
+      display:flex;
+      flex-direction: row;
+      justify-content:center;
+      gap:10px;
+      color:#fff;
+      padding-bottom: 20px;
+      align-items:center;
+    }
+    .stats1, .stats2, .stats3 {
+      padding:6px 16px;
+      font-size:12px;
+      background-image:url("./images/memory_1.jpg");
+      background-size:cover;
+      color:white;
+      border-radius:8px;
+      width:auto;
+}
+    .board{
+      display:grid;
+      gap:20px;
+      justify-content:center;
+      margin:12px auto;
+      transition:0.5s ease-in-out;
+    }
+
+    .card{
+      width:60px;
+      height:60px;
+      background-image: url(./images/memory_3.jpg);
+      background-size:cover;
+      border-radius:8px;
+      border: #999595 1px solid;
+      font-size:35px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      user-select:none;
+      color:transparent;
+      transition:transform 0.6s ease, background 0.3s;
+      transform-style: preserve-3d;
+      }
+
+    .card.flipped,
+    .card.matched{
+      transform: rotateY(180deg);
+      background: #50BB89;
+      color:#fff;
+      cursor:default;
+    }
+.card:hover  .card.flipped{
+  transform: rotateY(180deg);
+}
+    .popup{
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:1000;
+    }
+
+    .popup-content{
+      background-image:url("./images/memory_1.jpg");
+      background-size:cover;
+      padding:10px;
+      border-radius:10px;
+      width:90%;
+      max-width:300px;
+      color: #f7f4f4;
+    }
+
+    .stars{
+      color:gold;
+      font-size:20px;
+      margin:10px 0;
+    }
+
+    button{
+      padding:10px 20px;
+      font-size:12px;
+      background:#1e90ff;
+      color:#fff;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+      margin-top:10px;
+      width:90%;
+    }
+
+    button:hover{ background:#0c6ad4; }
+
+    #resetBtn{
+      padding:6px 16px;
+      font-size:12px;
+      background:#423204;
+      color:white;
+      border:none;
+      border-radius:8px;
+      width:auto;
+      margin-top: 0;
+    }
+
+    #resetBtn:hover{
+     background-image:url("./images/memory_1.jpg");
+      background-size:cover;
+      transform:scale(1.05);
+    }
+
+    @media (max-width:768px){
+
+      body{
+       padding: 40px; 
+      }
+      h1{
+        font-size:15px;
+      }
+      h2{
+        font-size:15px;
+      }
+      p{
+        font-size:12px;
+      }
+      .stats{
+        flex-direction: column;
+        gap: 10px;
+        font-size:9px;
+      }
+      .card{
+        width:45px;
+        height:45px;
+        font-size:30px;
+      }
+      button{
+        font-size: 9px;
+        width: 70%;
+      margin: auto;
+      }
+      .popup-content{
+       padding:5px;
+      }
+        .stars{
+      color:gold;
+      font-size:15px;
+      margin:10px 0;
+    }
+    .board{
+      gap:10px 0;
+
+    }
+    }
+  

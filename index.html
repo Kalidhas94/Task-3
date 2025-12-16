@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game — Flip & Match</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Memory Game — Flip & Match</h1>
+<p class="lead">Flip two cards to find a matching pair. Find all pairs to win.</p>
+
+<div class="stats">
+  <div class="stats1">Level Grid: <span id="levelText">2×2</span></div>
+  <div class="stats2">Moves: <span id="moves">0</span>/<span id="moveLimit">0</span></div>
+  <div class="stats3">Time: <span id="time">0</span>s</div>
+  <button id="resetBtn">Reset</button>
+</div>
+<div class="board" id="gameBoard"></div>
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h2 id="resultTitle"></h2>
+    <p id="resultStats" style="font-size:12px;  color:white;"></p>
+    <div class="stars" id="stars"></div>
+    <button id="nextLevelBtn" onclick="nextOrRetry()">Next Level</button>
+  </div>
+</div>
+<script src="memory.js"></script>
+</body>
+</html>
